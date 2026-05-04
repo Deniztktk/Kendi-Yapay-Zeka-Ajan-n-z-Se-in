@@ -7,7 +7,7 @@ Bu depo, siber güvenlik operasyonlarında "Sıfır Güven" (Zero-Trust) mimaris
 Bulut API'lerine veri sızdırmadan (Data Exfiltration), %100 operasyonel gizlilik (OpSec) ile kendi bilgisayarınızda çalıştırabileceğiniz güvenlik ajanları ağıdır.
 
 📖 **Teorik Altyapı ve Mimari:** Bu deponun teknik felsefesini ve mimari kararlarını detaylandırdığım Medium makalesini okumak için tıklayın: 
-👉 
+👉  
 ---
 
 ## 🚀 Ajanları Kendi Sisteminize Nasıl Kurarsınız?
@@ -18,3 +18,5 @@ Ayrıca Medium yazımı ziyaret ederek, tüm teknik detaylara hakim olabilir, si
 
 🌐 Ajan Kataloğu ve Araçlar
 Projede kullanılan diğer açık kaynaklı Red Team AI araçları (CrewAI, Fabric, AnythingLLM) ve örnek Modelfile şablonları için web arayüzümüzü ziyaret edebilirsiniz:
+
+https://deniztktk.github.io/Kendi-Yapay-Zeka-Ajaninizi-Secin/

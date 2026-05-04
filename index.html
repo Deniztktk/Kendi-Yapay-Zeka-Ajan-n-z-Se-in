@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cassandra | Yerel AI Güvenlik Laboratuvarı</title>
     <style>
-        /* Cassandra - Minimalist ve Klasik Tema */
         :root {
             --bg-color: #FDFBF7; 
             --text-main: #2C2C2C; 
@@ -32,7 +31,6 @@
             width: 100%;
         }
 
-        /* Kitap ve Motto Tasarımı */
         header {
             text-align: center;
             margin-bottom: 60px;
@@ -63,7 +61,6 @@
             color: var(--link-color);
         }
 
-        /* Kategori Başlıkları */
         h2.category-title {
             font-size: 1.8rem;
             font-weight: normal;
@@ -79,7 +76,6 @@
             margin-bottom: 30px;
         }
 
-        /* Tool Kartları (Minimalist) */
         .tool-card {
             background: transparent;
             border: 1px solid var(--border-color);
@@ -156,7 +152,6 @@
             border-radius: 2px;
         }
 
-        /* Kod Blokları */
         .code-block {
             background-color: #1E1E1E;
             color: #D4D4D4;
@@ -188,8 +183,7 @@
         <h1 class="title">Yerel Ajan Ağı</h1>
         <div class="quote">"We saw it coming."</div>
     </header>
-
-    <!-- KATEGORİ 1 -->
+>
     <section>
         <h2 class="category-title">I. Çekirdek Motorlar ve Temel Altyapı</h2>
         <p class="category-desc">Açık kaynaklı ağırlıkların (GGUF, safetensors) Apple Silicon birleşik belleği (Unified Memory) veya harici GPU'lar üzerinde izole ve off-grid çalıştırılmasını sağlayan yürütme katmanı.</p>
@@ -222,7 +216,6 @@ ollama run llama3:8b</code></pre>
         </div>
     </section>
 
-    <!-- KATEGORİ 2 -->
     <section>
         <h2 class="category-title">II. Otonom Ajanlar ve Orkestrasyon</h2>
         <p class="category-desc">Yapay zekaya spesifik roller, görevler ve hedefler vererek onları otonom çalışan bir güvenlik ekibine dönüştüren framework'ler. API entegrasyonu ve araç kullanımı (tool usage) bu katmanda gerçekleşir.</p>
@@ -280,7 +273,6 @@ ollama run llama3:8b</code></pre>
         </div>
     </section>
 
-    <!-- KATEGORİ 3 -->
     <section>
         <h2 class="category-title">III. Arayüzler ve Rol Yapma (Personalar)</h2>
         <p class="category-desc">Modellerin vektör veritabanlarıyla (ChromaDB vb.) desteklenerek uzun süreli hafızaya sahip olmasını ve detaylı karakter analizleri yapmasını sağlayan görsel katmanlar.</p>
@@ -313,7 +305,6 @@ docker run -d -p 3001:3001 --name anythingllm mintplexlabs/anythingllm</code></p
         </div>
     </section>
 
-    <!-- YENİ BÖLÜM: ÖRNEK AJAN ROLÜ -->
     <section>
         <h2 class="category-title">IV. Örnek Ajan Rolü: İleri Seviye Güvenlik Analisti</h2>
         <p class="category-desc">Aşağıdaki kod bloğu, Ollama üzerinde çalıştırabileceğin bir <strong>Modelfile</strong> örneğidir. Bu dosya, temel bir dil modelini alıp ona spesifik uzmanlıklar, katı kurallar ve bir kişilik (persona) yükler. Cihazında bu dosyayı <code>Modelfile</code> ismiyle kaydedip <code>ollama create AureliaAnalyst -f Modelfile</code> komutunu çalıştırırsan, kendi siber güvenlik ajanını yaratmış olursun.</p>

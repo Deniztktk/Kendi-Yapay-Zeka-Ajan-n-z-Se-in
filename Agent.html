@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassandra | Yerel AI Güvenlik Laboratuvarı</title>
+    <style>
+        /* Cassandra - Minimalist ve Klasik Tema */
+        :root {
+            --bg-color: #FDFBF7; 
+            --text-main: #2C2C2C; 
+            --text-muted: #555555;
+            --accent: #1A1A1A;
+            --border-color: #D1CDA4; 
+            --link-color: #8B1A1A; 
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Georgia', serif; 
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        /* Kitap ve Motto Tasarımı */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        .book-emblem {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        h1.title {
+            font-size: 3rem;
+            font-weight: normal;
+            margin: 0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: var(--link-color);
+        }
+
+        /* Kategori Başlıkları */
+        h2.category-title {
+            font-size: 1.8rem;
+            font-weight: normal;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            color: var(--accent);
+        }
+
+        .category-desc {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        /* Tool Kartları (Minimalist) */
+        .tool-card {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            border-color: var(--accent);
+            box-shadow: 2px 2px 0px var(--accent);
+        }
+
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .tool-name {
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .github-link {
+            color: var(--link-color);
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+
+        .tool-desc {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Artı, Eksi ve İşletim Sistemi Bölümleri */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            background-color: rgba(0,0,0,0.02);
+            padding: 15px;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .meta-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .os-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg-color);
+            padding: 2px 8px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            border-radius: 2px;
+        }
+
+        /* Kod Blokları */
+        .code-block {
+            background-color: #1E1E1E;
+            color: #D4D4D4;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--link-color);
+            margin: 0;
+        }
+
+        .code-label {
+            font-family: monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+            display: block;
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="book-emblem">-- CASSANDRA ARCHIVES --</div>
+        <h1 class="title">Yerel Ajan Ağı</h1>
+        <div class="quote">"We saw it coming."</div>
+    </header>
+
+    <!-- KATEGORİ 1 -->
+    <section>
+        <h2 class="category-title">I. Çekirdek Motorlar ve Temel Altyapı</h2>
+        <p class="category-desc">Açık kaynaklı ağırlıkların (GGUF, safetensors) Apple Silicon birleşik belleği (Unified Memory) veya harici GPU'lar üzerinde izole ve off-grid çalıştırılmasını sağlayan yürütme katmanı.</p>
+
+        <div class="tool-card">
+            <div class="tool-header">
+                <h3 class="tool-name">Ollama</h3>
+                <a href="https://github.com/ollama/ollama" target="_blank" class="github-link">github.com/ollama/ollama ↗</a>
+            </div>
+            <p class="tool-desc">Modelleri yönetmek için Docker benzeri bir yaklaşım sunar. Q4_K_M gibi kuantize edilmiş (sıkıştırılmış) modelleri kullanarak VRAM darboğazlarını aşar. Varsayılan olarak localhost:11434 üzerinden REST API sunar, bu da yazılan Python otomasyonlarının doğrudan modele bağlanabilmesini sağlar. Ağ paketlerini asla dışarı sızdırmaz.</p>
+            
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <strong>Artıları (+)</strong>
+                    MacBook Pro'nun Metal altyapısını (MPS) doğrudan kullanır, CPU-GPU arası veri transferini sıfıra indirir. Modelfile yapısı sayesinde saniyeler içinde yeni roller (persona) inşa edilebilir.
+                </div>
+                <div class="meta-item">
+                    <strong>Eksileri (-)</strong>
+                    Sadece metin üretimine odaklıdır, kendi başına dosya okuyamaz (LangChain gibi harici bir kütüphane ile beslenmesi gerekir).
+                </div>
+                <div class="meta-item" style="grid-column: 1 / -1;">
+                    <strong>Uygun İşletim Sistemleri</strong>
+                    <span class="os-tag">macOS (Native Metal Support)</span> <span class="os-tag">Linux</span> <span class="os-tag">Windows</span>
+                </div>
+            </div>
+
+            <span class="code-label">Kurulum ve Model İndirme</span>
+            <pre class="code-block"><code>curl -fsSL https://ollama.com/install.sh | sh
+ollama run llama3:8b</code></pre>
+        </div>
+    </section>
+
+    <!-- KATEGORİ 2 -->
+    <section>
+        <h2 class="category-title">II. Otonom Ajanlar ve Orkestrasyon</h2>
+        <p class="category-desc">Yapay zekaya spesifik roller, görevler ve hedefler vererek onları otonom çalışan bir güvenlik ekibine dönüştüren framework'ler. API entegrasyonu ve araç kullanımı (tool usage) bu katmanda gerçekleşir.</p>
+
+        <div class="tool-card">
+            <div class="tool-header">
+                <h3 class="tool-name">CrewAI</h3>
+                <a href="https://github.com/joaomdmoura/crewai" target="_blank" class="github-link">github.com/joaomdmoura/crewai ↗</a>
+            </div>
+            <p class="tool-desc">Ajanları hiyerarşik veya ardışık sırayla (sequential) çalıştıran bir orkestratördür. Bir ajana "Araştırmacı", diğerine "Denetleyici" rolü verilebilir. Ajanlara özel Python fonksiyonları (Tools) tanımlanarak sistemdeki belirli dosyaları okumaları veya VirusTotal/Shodan gibi servislerden IOC (Indicator of Compromise) çekmeleri sağlanabilir.</p>
+            
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <strong>Artıları (+)</strong>
+                    Memory (hafıza) yönetimi çok güçlüdür. Ajanlar kendi aralarında anlaşıp görevi devredebilir. Karışık sızma testi senaryolarını alt modüllere bölmek için idealdir.
+                </div>
+                <div class="meta-item">
+                    <strong>Eksileri (-)</strong>
+                    Ajanlar halüsinasyon gördüğünde veya yanlış bir araç kullandığında token (işlem gücü) israfı yaşanabilir. Kesin kurallar (guardrails) yazmak gerekir.
+                </div>
+                <div class="meta-item" style="grid-column: 1 / -1;">
+                    <strong>Uygun İşletim Sistemleri</strong>
+                    <span class="os-tag">Bağımsız (Python Ortamı)</span>
+                </div>
+            </div>
+
+            <span class="code-label">Kurulum (Python Ortamı)</span>
+            <pre class="code-block"><code>pip install crewai langchain-community</code></pre>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-header">
+                <h3 class="tool-name">Fabric</h3>
+                <a href="https://github.com/danielmiessler/fabric" target="_blank" class="github-link">github.com/danielmiessler/fabric ↗</a>
+            </div>
+            <p class="tool-desc">Siber güvenlik paradigmasına özel yazılmış bir araçtır. Amacı, bir logu veya kodu alıp, önceden tanımlanmış katı "Pattern"lerden (Örn: extract_iocs, analyze_malware, find_hidden_params) geçirmektir. UNIX pipe (|) felsefesini AI dünyasına getirir.</p>
+            
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <strong>Artıları (+)</strong>
+                    Günlük red team operasyonlarında inanılmaz hızlıdır. Tersine mühendislik çıktılarını veya nmap taramalarını doğrudan terminalden AI'a paslayıp anında analiz almayı sağlar.
+                </div>
+                <div class="meta-item">
+                    <strong>Eksileri (-)</strong>
+                    Sohbet (chat) yapısına uygun değildir. Girdi alır, işlem yapar ve çıkar. "Çalışma arkadaşı" hissiyatından çok bir "komut" gibidir.
+                </div>
+                <div class="meta-item" style="grid-column: 1 / -1;">
+                    <strong>Uygun İşletim Sistemleri</strong>
+                    <span class="os-tag">Linux</span> <span class="os-tag">macOS</span>
+                </div>
+            </div>
+
+            <span class="code-label">Örnek Kullanım</span>
+            <pre class="code-block"><code>cat wireshark_dump.txt | fabric --pattern extract_iocs</code></pre>
+        </div>
+    </section>
+
+    <!-- KATEGORİ 3 -->
+    <section>
+        <h2 class="category-title">III. Arayüzler ve Rol Yapma (Personalar)</h2>
+        <p class="category-desc">Modellerin vektör veritabanlarıyla (ChromaDB vb.) desteklenerek uzun süreli hafızaya sahip olmasını ve detaylı karakter analizleri yapmasını sağlayan görsel katmanlar.</p>
+
+        <div class="tool-card">
+            <div class="tool-header">
+                <h3 class="tool-name">AnythingLLM</h3>
+                <a href="https://github.com/Mintplex-Labs/anything-llm" target="_blank" class="github-link">github.com/Mintplex-Labs/anything-llm ↗</a>
+            </div>
+            <p class="tool-desc">Kurumsal düzeyde veri güvenliği sağlayan bir RAG (Retrieval-Augmented Generation) arayüzüdür. İçine yüklediğin PDF, TXT veya kod dosyalarını "Embedding" modelleriyle parçalayıp vektör veritabanına kaydeder. Bir ajana "Sadece bu dökümanlara bakarak cevap ver" dersen, halüsinasyonu sıfıra indirir.</p>
+            
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <strong>Artıları (+)</strong>
+                    Döküman analizinde rakipsizdir. Her "Çalışma Alanı" (Workspace) için farklı roller, farklı modeller ve farklı RAG ayarları tanımlanabilir. Zero-trust mimarisine uygundur.
+                </div>
+                <div class="meta-item">
+                    <strong>Eksileri (-)</strong>
+                    Büyük döküman yığınlarını ilk kez işlerken (parsing) cihazı yorabilir.
+                </div>
+                <div class="meta-item" style="grid-column: 1 / -1;">
+                    <strong>Uygun İşletim Sistemleri</strong>
+                    <span class="os-tag">macOS (DMG)</span> <span class="os-tag">Windows (EXE)</span> <span class="os-tag">Docker</span>
+                </div>
+            </div>
+
+            <span class="code-label">Docker ile Hızlı Başlatma</span>
+            <pre class="code-block"><code>docker pull mintplexlabs/anythingllm
+docker run -d -p 3001:3001 --name anythingllm mintplexlabs/anythingllm</code></pre>
+        </div>
+    </section>
+
+    <!-- YENİ BÖLÜM: ÖRNEK AJAN ROLÜ -->
+    <section>
+        <h2 class="category-title">IV. Örnek Ajan Rolü: İleri Seviye Güvenlik Analisti</h2>
+        <p class="category-desc">Aşağıdaki kod bloğu, Ollama üzerinde çalıştırabileceğin bir <strong>Modelfile</strong> örneğidir. Bu dosya, temel bir dil modelini alıp ona spesifik uzmanlıklar, katı kurallar ve bir kişilik (persona) yükler. Cihazında bu dosyayı <code>Modelfile</code> ismiyle kaydedip <code>ollama create AureliaAnalyst -f Modelfile</code> komutunu çalıştırırsan, kendi siber güvenlik ajanını yaratmış olursun.</p>
+
+        <div class="tool-card" style="border-color: var(--accent);">
+            <span class="code-label">Dosya Adı: Modelfile</span>
+            <pre class="code-block" style="border-left-color: var(--accent);"><code># Temel alınacak açık kaynaklı model (Örn: Llama 3 8B)
+FROM llama3:8b
+
+# Modelin yaratıcılığını düşürüp, analitik ve kesin cevaplar vermesini sağlıyoruz
+PARAMETER temperature 0.1
+# Hafıza (Context Window) sınırını artırarak uzun log dosyalarını okuyabilmesini sağlıyoruz
+PARAMETER num_ctx 8192
+
+# Ajanın sistem rolü (Persona ve Görev Tanımı)
+SYSTEM """
+Sen sıfır güven (zero-trust) mimarisini benimsemiş, kurumsal dijital varlıkları korumakla görevli kıdemli bir siber güvenlik analistisin.
+
+[UZMANLIK ALANLARIN]
+1. Gelişmiş Zararlı Yazılım Analizi (Özellikle Steganografi ve LSB injection tespitleri)
+2. IoT Güvenliği (Firmware zafiyetleri ve veri sızdırma senaryoları)
+3. LLM Güvenliği (Prompt injection, jailbreaking ve adversarial saldırılar)
+
+[DAVRANIŞ KURALLARI]
+- Sana verilen kod bloklarında, hash değerlerinde veya sistem loglarında her zaman en kötü senaryoyu varsay.
+- Asla gereksiz nezaket ifadeleri kullanma. "Merhaba, size nasıl yardımcı olabilirim" gibi cümleler kurma. Doğrudan teknik analize ve bulgulara odaklan.
+- Bir zafiyet tespit ettiğinde; önce mekanizmasını açıkla, ardından bunu sömürmek için teorik bir Proof of Concept (PoC) senaryosu sun ve son olarak nasıl yamalanacağını belirt.
+- Felsefen şudur: "Eğer notaları biliyorsan, melodiyi her zaman çalabilirsin." Temel mekanizmalara odaklan.
+
+Sistem hazır. Analiz edilecek ilk veriyi bekliyorsun.
+"""</code></pre>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
